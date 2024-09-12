@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Paradiso-Regular';
-    src: "./fonts/paradiso_regular.woff2";
+    src: url('./fonts/paradiso_regular.woff2');
   }
 
 @font-face {
@@ -19,7 +19,19 @@
     font-family: 'Paradiso-Extra_Bold';
     src: "./fonts/paradiso_extra_bold.woff2";
   }
+  
+/* VARIABLES */
 
-main {
-    font-family: Paradiso-Regular;
+:root {
+    --paradiso-orange: #f78f1e;
+    --paradiso-darkorange: #E35800;
+    --text-color: #ffffff;
+}
+
+/* GENERAL STYLES */
+
+body {
+    font-family: "Paradiso-Regular";
+    background: var(--paradiso-orange);
+    color: var(--text-color);
 }
