@@ -1,0 +1,25 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Paradiso-Regular';
+    src: "./fonts/paradiso_regular.woff2";
+  }
+
+@font-face {
+    font-family: 'Paradiso-Light';
+    src: "./fonts/paradiso_light.woff2";
+}
+
+@font-face {
+    font-family: 'Paradiso-Bold';
+    src: "./fonts/paradiso_bold.woff2";
+}
+
+@font-face {
+    font-family: 'Paradiso-Extra_Bold';
+    src: "./fonts/paradiso_extra_bold.woff2";
+  }
+
+main {
+    font-family: Paradiso-Regular;
+}
