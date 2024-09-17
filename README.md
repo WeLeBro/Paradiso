@@ -2,4 +2,4 @@
 
 <h2>Breakdown Schets</h2>
 
-![Paradiso Breakdown](https://github.com/user-attachments/assets/517b09f0-d996-4414-92ec-566f0945d494)
+![paradiso-breakdown](https://github.com/user-attachments/assets/97f5ce81-97ce-49c7-ab90-0dafcb0043e8)
