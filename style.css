@@ -113,8 +113,13 @@ header > h2 > a {
     overflow-y: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     scroll-snap-type: inline mandatory;
     margin-right: 0;
+}
+
+#carousel::-webkit-scrollbar {
+    display: none; /* hide scroll bar on Safari */
 }
 
 ul {
@@ -130,7 +135,7 @@ li.top {
     width: 257px;
     height: 320.75px;
     grid-template-rows: 1fr auto auto auto auto;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 .top section {
@@ -168,7 +173,9 @@ li.top {
 }
 
 .top img {
-    max-width: 20em;
+    height: 100%;
+    width: fit-content;
+    /* max-width: 20em; */
     grid-row: 1 / -1;
     grid-column: 1 / -1;
 }
@@ -176,13 +183,14 @@ li.top {
 .top p {
     margin: 0px 6px 5px 0px;
     font-family: Paradiso-Light;
+    font-size: 13px;
     background-color: black;
     border-radius: 25px;
-    padding: .4em .8em;
+    padding: .3em .8em;
 }
 
 #gradient {
-    grid-row: 3 / 6;
+    grid-row: 2 / 6;
     grid-column: 1 / -1;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 63%);
@@ -208,7 +216,7 @@ main > h3 {
 #today {
     margin: 10px 0px 5px 8px;
     display: flex;
-    gap: 60px;
+    gap: 20px;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: inline mandatory;
@@ -220,7 +228,7 @@ main > h3 {
 #sort ul {
     display: flex;
     gap: 3px;
-    margin: 3em 2px 3em 8px;
+    margin: 3.3em 2px 5em 8px;
     list-style: none;
 }
 
@@ -229,8 +237,8 @@ main > h3 {
     background: #ef7a12;
     border: none;
     padding: .8em;
-    font-family: inherit;
-    font-size: inherit;
+    font-family: Paradiso-Bold;
+    font-size: 14px;
 }
 
 #sort ul > li:first-child > button {
