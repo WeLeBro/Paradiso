@@ -85,7 +85,7 @@ h1 {
     font-weight: 2000;
     letter-spacing: -7px;
     font-size: 9.3em;
-    margin: -20px 2px 2px 2px;
+    margin: -20px 0px 2px 2px;
     overflow-x: hidden;
 }
 
@@ -174,7 +174,7 @@ li.top {
 }
 
 .top p {
-    margin: 0px 10px 5px 10px;
+    margin: 0px 6px 5px 0px;
     font-family: Paradiso-Light;
     background-color: black;
     border-radius: 25px;
@@ -195,7 +195,7 @@ main > h2 {
     font-weight: 2000;
     letter-spacing: -7px;
     font-size: 7.3em;
-    margin: .3em 2px 2px 2px;
+    margin: .3em 0px 2px 2px;
     overflow-x: hidden;
 }
 
@@ -206,11 +206,12 @@ main > h3 {
 }
 
 #today {
-    margin: 10px 2px 5px 8px;
+    margin: 10px 0px 5px 8px;
     display: flex;
     gap: 60px;
     overflow-x: scroll;
     overflow-y: hidden;
+    scroll-snap-type: inline mandatory;
     scrollbar-width: none;
 }
 
@@ -257,7 +258,7 @@ hr {
     margin-right: 10px;
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
