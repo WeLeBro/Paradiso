@@ -82,7 +82,7 @@ body {
 
 h1 {
     font-family: Helvetica;
-    font-weight: 2000;
+    font-weight: 1000;
     letter-spacing: -7px;
     font-size: 9.3em;
     margin: -20px 0px 2px 2px;
@@ -209,7 +209,7 @@ a.top {
 
 main > h2 {
     font-family: Helvetica;
-    font-weight: 2000;
+    font-weight: 1000;
     letter-spacing: -7px;
     font-size: 7.3em;
     margin: .3em 0px 2px 2px;
@@ -346,7 +346,7 @@ hr {
 .artist-page h1 {
     color: var(--text-color);
     font-family: Helvetica;
-    font-weight: 1900;
+    font-weight: 1000;
     font-size: 32.4px;
     margin-left: 15px;
     margin-top: 2px;
@@ -354,6 +354,13 @@ hr {
     grid-row: 3;
     position: absolute; /* Position h1 absolutely */
     width: 100%; /* Ensure h1 spans the full width */
+}
+
+.artist-page h2 {
+    font-family: Paradiso-Bold;
+    color: #606060;
+    font-size: 1.75em;
+    margin: 20px 15px 5px 15px;
 }
 
 .ticket {
@@ -373,7 +380,7 @@ hr {
 
 .ticket div {
     flex-grow: 1;
-    margin: none;
+    margin: 0;
     margin: 0;
 }
 
@@ -396,4 +403,71 @@ p.disclaimer {
     font-family: Paradiso-Bold;
     font-size: 15px;
     margin-top: -10px;
+}
+
+.sold-out {
+    font-size: 13px;
+    color: #a5a5a5;
+    margin: 0 20px 0 15px;
+}
+
+.sold-out p {
+    margin-bottom: -10px;
+}
+
+.sold-out a {
+    color: #a5a5a5;
+}
+
+.limited {
+    margin: 30px 22px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: black;
+}
+
+.limited img {
+    width: 11px;
+    margin-right: 8px;
+}
+
+.reg-text {
+    margin: 0 15px;
+    line-height: 23px;
+}
+
+.reg-text a {
+    color: black;
+    font-family: Paradiso-Extra_Bold;
+    text-decoration: none;
+}
+
+.reg-text img {
+    filter: invert(1);
+    width:  11px;
+    margin-left: 10px;
+}
+
+h3#mainhall {
+    font-family: Paradiso-Bold;
+    font-size: 1em;
+    color: black;
+    margin: 15px 15px 5px 15px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px 5px 15px;
+}
+
+.about img {
+    width: 15px;
+    margin-right: 11px;
+}
+
+iframe {
+    margin: 20px;
+    width: 330px;
 }
