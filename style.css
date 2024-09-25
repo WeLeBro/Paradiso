@@ -127,7 +127,6 @@ ul {
     display: flex;
     padding: 0;
     margin: 0;
-    transition: transform 0.5s ease;;
 }
 
 li.top {
@@ -136,6 +135,11 @@ li.top {
     height: 320.75px;
     grid-template-rows: 1fr auto auto auto auto;
     scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+li.top.active {
+    transform: scale(1.1); /* Enlarge the active item */
 }
 
 .top section {
@@ -174,8 +178,8 @@ li.top {
 
 .top img {
     height: 100%;
-    width: fit-content;
-    /* max-width: 20em; */
+    width: auto;
+    object-fit: cover;
     grid-row: 1 / -1;
     grid-column: 1 / -1;
 }
@@ -189,7 +193,12 @@ li.top {
     padding: .3em .8em;
 }
 
-#gradient {
+a.top {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.gradient {
     grid-row: 2 / 6;
     grid-column: 1 / -1;
     background: rgb(0,0,0);
@@ -294,42 +303,63 @@ hr {
 
 /* ARTIST HEADER */
 
+.artist-page {
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+.artist-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .artist-header {
     display: grid;
     height: 400px;
-    width: 375px;
+    width: 100%;
     grid-template-rows: auto auto 80px;
     position: relative; /* Add this to position h1 absolutely */
+    overflow: hidden;
 }
 
 .artist-header img {
     justify-self: center; /* Center the image horizontally */
     align-self: center; /* Center the image vertically */
-    object-fit: cover; /* Fill the section while maintaining aspect ratio */
+    object-fit: cover;
     grid-row: 1 / 4;
+    grid-column: 1 / -1;
     width: 100%; /* Ensure the image stays inside the section */
     height: 100%; /* Ensure the image fills the section */
+    overflow-x: hidden;
+}
+
+.gradient-artist {
+    grid-row: 1 / 4;
+    grid-column: 1 / -1;
+    align-self: end;
+    height: 250px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 63%);
 }
 
 .artist-page h1 {
+    color: var(--text-color);
     font-family: Helvetica;
     font-weight: 1900;
     font-size: 32.4px;
     margin-left: 15px;
     margin-top: 2px;
-    letter-spacing: -1px;
+    letter-spacing: -.9px;
     grid-row: 3;
     position: absolute; /* Position h1 absolutely */
     width: 100%; /* Ensure h1 spans the full width */
 }
 
 .ticket {
-    margin: 10px;
+    margin: 15px;
     padding: 1em;
     background-color: black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
 }
 
 .ticket a {
@@ -339,12 +369,31 @@ hr {
     font-family: Paradiso-Bold;
     font-size: 14px;
     text-decoration: none;
+}
+
+.ticket div {
     flex-grow: 1;
+    margin: none;
+    margin: 0;
 }
 
 .ticket img {
-    flex-grow: ;
-    justify-content: ;
     width: 1.5em;
     height: 1.5em;
+}
+
+p.disclaimer {
+    margin: 20px 15px;
+    color: #a5a5a5;
+    font-size: 10px;
+}
+
+.info {
+    margin: 0 0 0 15px;
+}
+
+.info > h3 {
+    font-family: Paradiso-Bold;
+    font-size: 15px;
+    margin-top: -10px;
 }
