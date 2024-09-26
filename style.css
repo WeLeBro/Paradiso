@@ -193,13 +193,13 @@ li.top.active {
 }
 
 a.top {
-    color: inherit; /* Inherit color from parent */
-    text-decoration: none; /* Remove underline */
+    color: inherit;
+    text-decoration: none;
 }
 
 .gradient {
     grid-row: 2 / 6;
-    grid-column: 1 / -1;
+    grid-column: 1 / 1;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,0) 63%);
 }
@@ -302,6 +302,19 @@ hr {
 
 /* ARTIST HEADER */
 
+.artist-page > header > a {
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin: 15px;
+}
+
+.artist-page > header > a > img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
 .artist-page {
     background-color: white;
     color: black;
@@ -319,18 +332,18 @@ hr {
     height: 400px;
     width: 100%;
     grid-template-rows: auto auto 80px;
-    position: relative; /* Add this to position h1 absolutely */
+    position: relative;
     overflow: hidden;
 }
 
 .artist-header img {
-    justify-self: center; /* Center the image horizontally */
-    align-self: center; /* Center the image vertically */
+    justify-self: center;
+    align-self: center;
     object-fit: cover;
     grid-row: 1 / 4;
     grid-column: 1 / -1;
-    width: 100%; /* Ensure the image stays inside the section */
-    height: 100%; /* Ensure the image fills the section */
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -351,8 +364,8 @@ hr {
     margin-top: 2px;
     letter-spacing: -.9px;
     grid-row: 3;
-    position: absolute; /* Position h1 absolutely */
-    width: 100%; /* Ensure h1 spans the full width */
+    position: absolute;
+    width: 100%;
 }
 
 .artist-page h2 {
@@ -387,6 +400,8 @@ hr {
     width: 1.5em;
     height: 1.5em;
 }
+
+/* ARTIST PAGE */
 
 p.disclaimer {
     margin: 20px 15px;
@@ -494,14 +509,44 @@ iframe:last-of-type {
 
 .ssj-lineup {
     display: flex;
-
+    margin: 15px 0px 50px 15px;
+    overflow-x: scroll;
 }
 
-.ssj-lineup img {
-    width: 200px;
-    height: 200px;
+.top2 {
+    display: grid;
+    width: 257px;
+    height: 320.75px;
+    grid-template-rows: 1fr auto auto;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.top2 img {
+    height: 100%;
+    width: auto;
     object-fit: cover;
-    margin: 0 10px;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+.top2 h4 {
+    margin: 0px 20px 5px 10px;
+    color: white;
+    font-size: 20px;
+    grid-row: 2;
+    grid-column: 1 / -1;
+}
+
+.top2 h3 {
+    margin: 0px 20px 5px 10px;
+    font-family: Paradiso-Bold;
+    color: white;
+    font-size: 20px;
+    grid-row: 3;
+    grid-column: 1;
 }
 
 .howtoget img {
@@ -511,6 +556,7 @@ iframe:last-of-type {
 }
 
 .howtoget a {
+    /* how do I get a margin on the top */
     margin-left: 15px;
     color: black;
     text-decoration: none;
@@ -529,3 +575,6 @@ img#refresh {
     width:  16px;
     margin-right: 10px;
 }
+
+/* menu */
+
