@@ -73,6 +73,7 @@ body {
     border: none;
     font-family: inherit;
     font-size: inherit;
+    cursor: pointer;
 }
 
 #nav img {
@@ -531,6 +532,7 @@ iframe:last-of-type {
     height: 100%;
     width: auto;
     object-fit: cover;
+    object-position: center;
     grid-row: 1 / -1;
     grid-column: 1 / -1;
 }
@@ -585,17 +587,59 @@ img#refresh {
 /* menu */
 
 .mainmenu {
-    margin: 20px;
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    background-color: white;
+    padding: 15px;
+    z-index: 1;
+    top: -160%;
+    transition: top .5s ease;
+    max-height: 640px;
+    overflow-y: scroll;
 }
 
 .mainmenu button {
     color: black;
     display: flex;
+    align-items: center;
     background: none;
     border: none;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 17px;
     margin-bottom: 35px;
+    margin-left: -10px;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.mainmenu.open {
+    top: 0;
+}
+
+#x-cont {
+    display: flex;
+    position: relative;
+    margin-right: 30px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.x-bar {
+    width: 1.25em;
+    height: 0.13em;
+    background-color: black;
+    position: absolute;
+}
+
+.x-bar:first-child {
+    transform: rotate(45deg);
+}
+
+.x-bar:last-child {
+    transform: rotate(-45deg);
 }
 
 .mainmenu a {
@@ -610,15 +654,60 @@ img#refresh {
 #mm-prio1 {
     font-family: Paradiso-Extra_Bold;
     letter-spacing: -2px;
-    font-size: 45px;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 20px;
 }
 
 #mm-prio2 {
     font-family: Paradiso-Bold;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 30px;
+    margin-bottom: 20px;
+}
+
+#mm-prio3 {
+    font-family: Paradiso-Bold;
+    font-size: 19px;
+    margin-bottom: 60px;
+}
+
+#mm-prio3 a {
+    display: flex;
+    align-items: center;
+}
+
+#mm-prio3 img {
+    width: 34px;
+    border-radius: 25px;
+    margin: 5px 15px 3px 0px;
 }
 
 .ticket div h3, h4 {
     margin: 0;
+}
+
+#socials {
+    height: 23px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#socials img {
+    height: 20px;
+    margin: 5px 25px 5px 0px;
+}
+
+#partners {
+    margin-bottom: 30px;
+}
+
+#partners img {
+    height: 23px;
+    margin: 5px 15px 5px 0px;
+}
+
+#heineken img {
+    height: 12px
 }
