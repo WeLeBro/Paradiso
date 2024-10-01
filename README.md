@@ -4,10 +4,12 @@
 Ik heb voor FED de site van Paradiso gekozen omdat ik het design er goed uit vind zien en ik een haalbare uitdaging voor me zie. Er is nog geen dark-mode of uberhaupt veel animaties en ik hoop die dan ook toe ge kunnen voegen over de loop van de weken.
 
 <h2>Toegankelijkheidstest</h2>
+
 [Toegankelijkheidstest Paradiso.pdf](https://github.com/user-attachments/files/17198514/Toegankelijkheidstest.Paradiso.pdf)
 
 
 <h2>Breakdown Schets</h2>
+
 ![paradiso-breakdown](https://github.com/user-attachments/assets/97f5ce81-97ce-49c7-ab90-0dafcb0043e8)
 
 <h2>Voortgang</h2>
