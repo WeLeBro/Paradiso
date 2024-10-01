@@ -26,7 +26,13 @@
 :root {
     --paradiso-orange: #f78f1e;
     --paradiso-darkorange: #E35800;
+    --sub-text: #ffba71;
+    --sub-text2: #ffd287;
     --text-color: #ffffff;
+    --menu-link: #000000;
+    --menu-background: #ffffff;
+    --sort: #ef7a12;
+    --sort-select: #e15801;
 }
 
 /* GENERAL STYLES */
@@ -37,6 +43,24 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
     margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --paradiso-orange: #000000;
+    --text-color: #ffffff;
+    --sub-text: #a3a3a3;
+    --sub-text2: #a3a3a3;
+    --menu-background: #000000;
+    --menu-link: #ffffff;
+    --sort: #898989;
+    --sort-select: #505050;
+    }
+
+    #socials img, #partners img, #refresh, .ticket img {
+        filter: invert(1);
+    }
+
 }
 
 /* HEADER */
@@ -51,7 +75,7 @@ body {
     margin-left: 7px;
 }
 
-#nav div {
+.hamburger {
     width: 1.1em;
     height: .12em;
     background-color: white;
@@ -91,7 +115,7 @@ h1 {
 }
 
 header > h2 {
-    color: #ffba71;
+    color: var(--sub-text);
     font-family: Paradiso-Bold;
     font-size: 1.10em;
     margin-left: 1.2em;
@@ -108,6 +132,7 @@ header > h2 > a {
 /* FIRST PART */
 
 #carousel {
+    color: white;
     display: flex;
     align-items: center;
     transition: transform 0.5s ease;
@@ -190,7 +215,7 @@ li.top, li.top a {
 }
 
 .top a {
-    color: inherit;
+    color: white;
     text-decoration: none;
 }
 
@@ -263,7 +288,7 @@ main > h3 {
 
 #sort li > button {
     color: var(--text-color);
-    background: #ef7a12;
+    background: var(--sort);
     border: none;
     padding: .8em;
     font-family: Paradiso-Bold;
@@ -271,7 +296,7 @@ main > h3 {
 }
 
 #sort ul > li:first-child > button {
-    background: #e15801;
+    background: var(--sort-select);
 }
 
 .agenda {
@@ -288,7 +313,7 @@ hr {
     margin-right: 10px;
     border: none;
     height: .6px;
-    background-color: #ffae4a;
+    background-color: var(--sub-text2);
 }
 
 .agenda-item {
@@ -306,7 +331,7 @@ hr {
 }
 
 .agenda-item p:first-of-type {
-    color: #ffd287;
+    color: var(--sub-text2);
     display: flex;
     justify-content: end;
     margin: 0;
@@ -315,7 +340,7 @@ hr {
 }
 
 .agenda-item p:last-of-type {
-    color: #ffd287;
+    color: var(--sub-text2);
     margin: 0;
     grid-column: 1 / 3;
     grid-row: 2;
@@ -337,8 +362,8 @@ hr {
 }
 
 .artist-page {
-    background-color: white;
-    color: black;
+    background-color: var(--menu-background);
+    color: var(--menu-link);
     overflow-x: hidden;
 }
 
@@ -399,14 +424,14 @@ hr {
 .ticket {
     margin: 15px 15px -55px 15px;
     padding: 1em;
-    background-color: black;
+    background-color: var(--menu-link);
     transform: translateY(-50px);
 }
 
 .ticket a {
     display: flex;
     align-items: center;
-    color: var(--text-color);
+    color: var(--menu-background);
     font-family: Paradiso-Bold;
     font-size: 14px;
     text-decoration: none;
@@ -418,9 +443,22 @@ hr {
     margin: 0;
 }
 
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .ticket img {
     width: 1.5em;
     height: 1.5em;
+    animation: moveRight 3s infinite;
 }
 
 .ticket h4 {
@@ -552,7 +590,6 @@ iframe:last-of-type {
 }
 
 .top2 img {
-    /* transform: translateX(-150px); */
     height: 100%;
     width: auto;
     object-fit: cover;
@@ -580,13 +617,13 @@ iframe:last-of-type {
 
 .howtoget img {
     filter: invert(1);
-    width:  11px;
+    width: 11px;
     margin-left: 10px;
 }
 
 .howtoget a {
     margin-left: 15px;
-    color: black;
+    color: var(--menu-link);
     text-decoration: none;
 }
 
@@ -599,12 +636,12 @@ footer {
 }
 
 footer a {
-    color: black;
+    color: var(--menu-link);
     text-decoration: none;
 }
 
 img#refresh {
-    width:  16px;
+    width: 16px;
     margin-right: 10px;
 }
 
@@ -614,17 +651,18 @@ img#refresh {
     position: fixed;
     width: 100vw;
     height: auto;
-    background-color: white;
+    color: var(--menu-link);
+    background-color: var(--menu-background);
     padding: 15px;
     z-index: 100;
     top: -160%;
     transition: top .6s cubic-bezier(1, 0, 0, 1);
-    max-height: 640px;
+    max-height: 42.5em;
     overflow-y: scroll;
 }
 
 .mainmenu button {
-    color: black;
+    color: var(--menu-link);
     display: flex;
     align-items: center;
     background: none;
@@ -654,7 +692,7 @@ img#refresh {
 .x-bar {
     width: 1.25em;
     height: 0.13em;
-    background-color: black;
+    background-color: var(--menu-link);
     position: absolute;
 }
 
@@ -667,7 +705,7 @@ img#refresh {
 }
 
 .mainmenu a {
-    color: black;
+    color: var(--menu-link);
     text-decoration: none;
 }
 
@@ -734,4 +772,28 @@ img#refresh {
 
 #heineken img {
     height: 12px
+}
+
+/* SCROLL REVEAL */
+
+.agenda-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.agenda-item.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* H1 ANIMATION */
+
+span {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+span.fade {
+    opacity: 1;
 }
